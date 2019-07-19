@@ -62,6 +62,7 @@ describe("Skier movement", () => {
     }
   });
 });
+
 describe("Rhino Movement and actions", () => {
   test("Checks if rhino hits skier", () => {
     const yPosition = 300;
@@ -73,7 +74,3 @@ describe("Rhino Movement and actions", () => {
     expect(skier.eaten).toBeTruthy();
   });
 });
-
-// test("true equals true", () => {
-//   expect(true).toBe(true);
-// });
