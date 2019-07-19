@@ -9,8 +9,8 @@ import { Rect } from "./Utils";
 
 export class Game {
   gameWindow = null;
-  gameStatus = null;
-
+  level = 0;
+  transitionDistance = Constants.SKIER_LEVEL_UP;
   constructor() {
     this.assetManager = new AssetManager();
     this.canvas = new Canvas(Constants.GAME_WIDTH, Constants.GAME_HEIGHT);
@@ -36,8 +36,34 @@ export class Game {
   run() {
     this.canvas.clearCanvas();
     this.updateGameWindow();
+    this.updateGameLevel();
     this.drawGameWindow();
+    this.updateScoreboard();
     requestAnimationFrame(this.run.bind(this));
+  }
+  /**
+   * This method updates the game level and speed and the skier moves down;
+   */
+  updateGameLevel(){
+    if (this.skier.y >= this.transitionDistance) {
+      this.transitionDistance += Constants.SKIER_LEVEL_UP;
+      this.level += 1; 
+      this.skier.speed += 1; 
+    }
+  }
+  /**
+   * This method updates scoreboard
+   */
+  updateScoreboard(){
+    const xPosition = this.skier.x;
+    const yPosition = this.skier.y;
+    const level = this.level;
+    const speed = this.skier.speed;
+    document.getElementById('gameLevel').innerHTML = level;
+    document.getElementById('gameSpeed').innerHTML = speed;
+    document.getElementById('skierXPosition').innerHTML = xPosition;
+    document.getElementById('skierYPosition').innerHTML = yPosition;
+
   }
 
   updateGameWindow() {

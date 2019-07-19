@@ -13,6 +13,8 @@ export class Canvas {
     this.width = width;
     this.height = height;
     this.createCanvas();
+    // Draw scoreboard
+    this.drawScoreboard();
   }
 
   createCanvas() {
@@ -29,6 +31,34 @@ export class Canvas {
     document.body.appendChild(canvas);
   }
 
+  /**
+   * This method created the scoreboard 
+   */
+   drawScoreboard(){
+    const scoreboard = document.createElement("div");
+    const scoreboardTitle = document.createElement('h2');
+    const speedContainer = document.createElement('p');
+    const levelContainer = document.createElement('p');
+    const xContainer = document.createElement('p');
+    const yContainer = document.createElement('p');
+
+    scoreboardTitle.className = 'title';
+
+    scoreboardTitle.innerHTML = 'Scoreboard';
+    speedContainer.innerHTML = '<span> Speed </span> <span id="gameSpeed"></span>';
+    levelContainer.innerHTML = '<span>Level</span> <span id="gameLevel"></span>';
+    xContainer.innerHTML = '<span> X-Position </span> <span id="skierXPosition"></span>';
+    yContainer.innerHTML = '<span> Y-Position </span> <span id="skierYPosition"></span>';
+    
+    scoreboard.id = "scoreboard";
+    scoreboard.appendChild(scoreboardTitle);
+    scoreboard.appendChild(speedContainer);
+    scoreboard.appendChild(levelContainer);
+    scoreboard.appendChild(xContainer);
+    scoreboard.appendChild(yContainer);
+    document.body.appendChild(scoreboard);
+  }
+  
   clearCanvas() {
     this.ctx.clearRect(this.x, this.y, this.width, this.height);
   }

@@ -91,3 +91,11 @@ how creative candidates get with this.
 * Write more unit tests for your code
 
 We are looking forward to see what you come up with!
+
+
+---
+# Solution Documentation
+## Bug fixes
+  * Fixes bug that makes the game crash after the skier crashes into an obstacle and the left key is pressed 
+    * When the skier crashes into an obstacle, the games sets the skier direction to 0. by pressing the left key the game sets skier direction which is 0 to -1. The value -1 not being a valid SKIER_DIRECTIONS as set in constants makes the game crash while using the index to get the skier SKIER_DIRECTION_ASSET.
+    * By using a switch statement i was able to check when the skier crashes than make the skier move facing left.

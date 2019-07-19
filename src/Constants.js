@@ -12,7 +12,8 @@ export const TREE = 'tree';
 export const TREE_CLUSTER = 'treeCluster';
 export const ROCK1 = 'rock1';
 export const ROCK2 = 'rock2';
-export const NOIAMGE = 'noimage';
+export const NO_IMAGE = 'noimage';
+
 /* Rhino Assets */
 export const RHINO = 'rhinoDefault';
 export const RHINO_LEFT = 'rhinoLeft';
@@ -25,14 +26,16 @@ export const RHINO_LIFT_EAT3 = 'rhinoLiftEat3';
 export const RHINO_LIFT_EAT4 = 'rhinoLiftEat4';
 
 //
-export const SKIER_STARTING_SPEED = 10;
+export const SKIER_STARTING_SPEED = 5;
+export const RHINO_STARTING_SPEED = 5;
+export const SKIER_LEVEL_UP = 2000;
 export const SKIER_DIAGONAL_SPEED_REDUCER = 1.4142;
 export const RHINO_SKIER_DISTANCE = 250;
 export const RHINO_START_POSITION = 3000;
 
 export const ASSETS = { 
 
-    [NOIAMGE]: 'data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=',
+    [NO_IMAGE]: 'data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=',
     [SKIER_CRASH]: 'img/skier_crash.png', 
     [SKIER_LEFT]: 'img/skier_left.png',
     [SKIER_LEFTDOWN]: 'img/skier_left_down.png',

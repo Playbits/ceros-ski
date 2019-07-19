@@ -6,7 +6,7 @@ import { endGame } from "../Core/Utils";
 
 export class Rhino extends Entity {
   assetName = Constants.RHINO;
-  speed = 5; //Constants.SKIER_STARTING_SPEED;
+  speed = Constants.RHINO_STARTING_SPEED;
   direction = Constants.SKIER_DIRECTIONS.DOWN;
   eating = false;
   index = 0;
@@ -62,7 +62,7 @@ export class Rhino extends Entity {
         this.rhinoEatSkier(skier);
       }
     } else {
-      this.speed = 5;
+      this.speed = Constants.RHINO_STARTING_SPEED;
     }
   }
   /**
@@ -72,10 +72,9 @@ export class Rhino extends Entity {
   rhinoEatSkier(skier) {
     this.eating = true;  // set eating true to stop rhino movement
     skier.eaten = true;  
-    skier.assetName = Constants.NOIAMGE; // Remove skier image
+    skier.assetName = Constants.NO_IMAGE; // Remove skier image
     // stop rhino animation
     clearInterval(this.animateInterval);
-    //Set 
     const rhinoEatAsset = Constants.RHINO_EAT_ASSET;
     this.assetName = rhinoEatAsset[this.index];
     const intervalID = setInterval(() => {
