@@ -12,6 +12,18 @@ export function intersectTwoRects(rect1, rect2) {
     rect2.bottom < rect1.top
   );
 }
+/**
+ * This method ends and restarts the game.
+ * @param {intervalID} intervalID 
+ */
+export function endGame(intervalID){
+  clearInterval(intervalID)
+  alert('GAME OVER');
+  const confirmed = confirm('Do you want to restart the game');
+  if(confirmed){
+      location.reload();
+  }
+}
 
 export class Rect {
   left = 0;
