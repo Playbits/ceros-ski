@@ -33,7 +33,6 @@ describe("Skier movement", () => {
         skier.setDirection(direction);
         skier.turnUp();
         expect(skier.direction).toBe(direction);
-        // console.log(Constants.SKIER_DIRECTION_ASSET[direction]);
         expect(skier.assetName).toBe(Constants.SKIER_DIRECTION_ASSET[direction]);
       }
     });
