@@ -97,5 +97,12 @@ We are looking forward to see what you come up with!
 # Solution Documentation
 ## Bug fixes
   * Fixes bug that makes the game crash after the skier crashes into an obstacle and the left key is pressed 
-    * When the skier crashes into an obstacle, the games sets the skier direction to 0. by pressing the left key the game sets skier direction which is 0 to -1. The value -1 not being a valid SKIER_DIRECTIONS as set in constants makes the game crash while using the index to get the skier SKIER_DIRECTION_ASSET.
+    * When the skier crashes into an obstacle, the games sets the skier direction to 0. by pressing the left key the game sets skier direction which is 0 to -1. The value -1 is not a valid SKIER_DIRECTIONS index this makes the game crash when getting the skier SKIER_DIRECTION_ASSET.
     * By using a switch statement i was able to check when the skier crashes than make the skier move facing left.
+##  New features
+  * The rhino was introduced after 2000 default Y distance covered as set in Constants RHINO_START_POSITION
+  * The rhino catches and eats the skier When the skier crashes or stops and the game is over. 
+    * The skier assets is sets to NO_IMAGE a transparent base_64 data img
+  * The skier jumps over stones obstacles either automatically or by pressing the up key.
+  * Increment game speed and level proportional to the skier Y-Position as set in Constants SKIER_LEVEL_UP
+  * Introduced Scoreboard which displays the game progress on X-Position , Y-Position , Level and game speed

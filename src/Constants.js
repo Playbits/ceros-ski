@@ -27,11 +27,11 @@ export const RHINO_LIFT_EAT4 = 'rhinoLiftEat4';
 
 //
 export const SKIER_STARTING_SPEED = 5;
-export const RHINO_STARTING_SPEED = 5;
-export const SKIER_LEVEL_UP = 2000;
+export const SKIER_LEVEL_UP = 3000;
 export const SKIER_DIAGONAL_SPEED_REDUCER = 1.4142;
+export const RHINO_STARTING_SPEED = 5;
 export const RHINO_SKIER_DISTANCE = 250;
-export const RHINO_START_POSITION = 3000;
+export const RHINO_START_POSITION = 2000;
 
 export const ASSETS = { 
 

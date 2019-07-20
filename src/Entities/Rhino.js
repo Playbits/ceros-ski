@@ -37,7 +37,7 @@ export class Rhino extends Entity {
     }
   }
   /**
-   * This method animates the rhino movement 
+   * This method animates the rhino movement
    */
   animateRhino() {
     this.animateInterval = setInterval(() => {
@@ -70,8 +70,8 @@ export class Rhino extends Entity {
    * @param {Skier} skier
    */
   rhinoEatSkier(skier) {
-    this.eating = true;  // set eating true to stop rhino movement
-    skier.eaten = true;  
+    this.eating = true; // set eating true to stop rhino movement
+    skier.eaten = true;
     skier.assetName = Constants.NO_IMAGE; // Remove skier image
     // stop rhino animation
     clearInterval(this.animateInterval);
